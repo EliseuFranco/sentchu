@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentchu</title>
+    <link rel="stylesheet" href="Estilos/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navegation">
+            <h1 class="home">Sentchu swap</h1>
+            <ul>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#conversor">Taxas</a></li>
+                <li><a href="#">Contactos</a></li>
+                <li><a id="cor" class="botao" href="#">Comprar</a></li>
+                <li><a class="botao" href="#">Vender</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="titulo">
+        <h1>Venda ou compre dinheiro sem complicações</h1>
+        <p>Transações rápidas e seguras</p>
+        <a class="botao" href="#conversor">Ver taxas de câmbio</a>
+    </section>
+
+    <section class="servicos">
+        <article class="servico">
+            <h2>Serviços</h2>
+        </article>
+
+        <article class="conteiner">
+            <div class="content">
+                <h1>Olá</h1>
+            </div>
+            <div class="content">
+                <h1>Mundo!</h1>
+            </div>
+            <div class="content">
+                <h1>Primeiro</h1>
+            </div>
+        </article>
+    </section>
+
+    <section class="conversor" id="conversor">
+        <article class="servico">
+            <h3>Taxas da banca comercial</h3>
+        </article>
+        <section>
+            <article class="converter">
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Moeda</th>
+                        <th scope="col">Taxa</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Dólar Americano (USD)</td>
+                        <td>5.10</td>
+                        <td>5.25</td>
+                      </tr>
+                      <tr>
+                        <td>Euro (EUR)</td>
+                        <td>5.60</td>
+                        <td>5.75</td>
+                      </tr>
+                      <tr>
+                        <td>Libra Esterlina (GBP)</td>
+                        <td>6.20</td>
+                        <td>6.35</td>
+                      </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <article id="converteu">
+                <h4>Conversor</h4>
+                <form action="#" method="post">
+                    <div class="converte">
+                        <input type="number" min="0" placeholder="Select the value">
+                    </div>
+                    <div class="converte" id="coin-name">
+                        <select name="coins" id="coin-name">
+                            <option value="#">Escolha a moeda...</option>
+                            <option value="USD">Dólar americano (USD)</option>
+                            <option value="EUR">Euro (EUR)</option>
+                            <option value="AKZ">Kwanza (AOA)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <input type="submit" value="Converter">
+                    </div>
+                </form>
+            </article>
+        </section>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contato</h2>
+            <p>Entre em contato conosco para mais informações ou para realizar sua transação.</p>
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Seu Nome" required>
+                <input type="email" name="email" placeholder="Seu Email" required>
+                <textarea name="message" rows="4" placeholder="Sua Mensagem"></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Sentchu Swap Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
