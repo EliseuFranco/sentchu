@@ -7,72 +7,51 @@ body {
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
-header{
-    background-color:#38362F;
-    color: #fff;
-    padding: 10px;
-
-}
-.material-symbols-outlined{
-    cursor: pointer;
-    color: #FFC800;
-}
-
-@keyframes appear{
-    from{
-        left: 0;
-    }
-    to {
-        right: 50px;
-    }
-}
-.navegation{
-    
-    position: fixed;
-    z-index: 1;
-    max-width: 0px;
-    top: 0;
-    left: 0;
-    height: 100%;
+header {
     background-color: #38362F;
-    transition: 0.5s;
-    overflow-x: hidden;
+    padding: 20px;
+}
+.navegation {
     display: flex;
-    flex-direction: column;
-
-    animation-name: appear;
-    animation-duration: 0.3s;
-    animation-fill-mode: forwards;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 80%;
+    margin: auto;    
 }
-.navegation ul {
+.navegation > ul {
     list-style-type: none;
-    
+    padding: 10px;
 }
-.navegation ul li{
-    padding: 7px;
-    width: 100%;
+.navegation > ul > li {
+    display: inline-block;
+    padding: 10px;
+    color: #FFC800;
 }
-.navegation ul li:hover{
-    background-color: #ffc8007b;
-}
-.navegation ul li a{
+.navegation ul li a {
+    color: white;
     text-decoration: none;
-    color: #fff;
-    font-size: 19px;
-    padding: 10px;
 }
-.home{
-    padding: 10px;
+.navegation > ul > li a.botao {
+    color: #38362F;
+}
+.home {
     color: #FFC800;
-    font-size: 20px;
-    margin-top: 60px;
-    margin-bottom: 20px;
+    float: right;
+    font-weight: bold;
 }
-#close{
-    font-size: 25px;
-    color: #FFC800;
-    transition: 0.1s;
+.botao {
+    text-decoration: none;
+    background-color: #FFC800;
+    color: #38362F;
+    border: 1px solid rgba(0, 0, 0, 0.518);
+    padding: 8px;
+    border-radius: 8px;
 }
+.botao:hover {
+    opacity: 0.7;
+}
+
+/* Código CSS para a section titulo */
 #titulo {
     position: relative;
     display: flex;
@@ -102,25 +81,12 @@ header{
     z-index: 1;
 }
 #titulo h1 {
-    text-align: center;
-    max-width: 1000px;
+    font-size: 30px;
     padding: 10px;
-    z-index: -1;
 }
 #titulo p {
     font-size: 20px;
     padding: 10px;
-    z-index: -1;
-}
-#titulo > a{
-    text-decoration: none;
-    background-color: #FFC800;
-    color: #38362F;
-    padding: 10px;
-    border-radius: 7px;
-}
-#titulo > a:hover{
-    opacity: 0.8;
 }
 
 /* Código CSS para os Serviços */
@@ -134,60 +100,51 @@ header{
     padding: 10px;
 }
 .conteiner {
+    display: flex;
+    justify-content: center;
     gap: 10px;
 }
 .content {
-    max-width: 400px;
+    width: 350px;
     height: 200px;
     background-color: #FFC800;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.265);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.557);
+}
+
+/* CSS para o conversor de moedas */
+.conversor {
+    position: relative;
     margin: auto;
-    margin-bottom: 10px;
+    padding: 20px;
+    background-color: lightgray;
+    
 }
-table {
-    width: 100%; 
-    border: none;
-    border-collapse: collapse;
-    margin: 20px 0; 
-    font-family: 'Arial', sans-serif;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    border-radius: 8px;
-    overflow: hidden; 
-}
-
-th, td {
-    padding: 12px; 
+.conversor .servico {
     text-align: left;
-    font-size: 14px;
+}
+.servico > h3{
+    position: absolute;
+    top: 40%;
+    margin-left: 70px;
 }
 
+table {
+    width: 58%; 
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-left: 20px;
+    margin: auto;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 7px;
+}
 th {
-    background-color: #38362F; 
-    color: white; 
-    text-transform: uppercase; 
-    letter-spacing: 0.5px; 
+    background-color: #38362F;
+    color: #fff;
 }
-
-td {
-    background-color: #f4f4f4; 
-    border-bottom: 1px solid #ddd; 
-}
-
-tr:nth-child(even) td {
-    background-color: #e9e9e9; 
-}
-
-tr:hover td {
-    background-color: #d3d3d3; 
-    transition: background-color 0.3s ease; 
-}
-
-table, th, td {
-    border: 1px solid #ddd; 
-}
-
-
 .converte {
     display: inline-block;
     margin-right: 10px; 
@@ -203,15 +160,6 @@ table, th, td {
 }
 #converteu{
     text-align: center;
-}
-#converteu > h4{
-    margin: 15px;
-}
-hr{
-    width: 80%;
-    margin: auto;
-    margin-top: 25px;
-    color: #33333325;
 }
 input[type=number], select {
     height: 28px;
@@ -237,6 +185,7 @@ input[type=submit]:hover {
     background-color: #FFC800;
     color: #38362F;
 }
+
 .contact {
     background-color: #f4f4f4;
     padding: 40px 0;
@@ -248,16 +197,17 @@ input[type=submit]:hover {
     flex-direction: column;
     gap: 15px;
     align-items: center;
-    max-width: 500px;
+    max-width: 600px;
     margin: 0 auto;
 }
 
 .contact input, .contact textarea {
-    width: 80%;
+    width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
 }
+
 .contact button {
     background-color: #FFC800;
     color: #38362F;
@@ -269,15 +219,6 @@ input[type=submit]:hover {
 .contact button:hover{
     opacity: 0.8;
 }
-.contact h2 {
-    margin-bottom: 20px; 
-}
-
-.contact p {
-    margin-top: 0; 
-    margin-bottom: 20px;
-}
-
 
 /* Rodapé */
 .footer {
@@ -287,3 +228,4 @@ input[type=submit]:hover {
     padding: 15px 0;
     margin-top: 40px;
 }
+

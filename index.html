@@ -5,17 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sentchu</title>
     <link rel="stylesheet" href="Estilos/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
 </head>
 <body>
     <header>
-        <nav class="navegation">
+        <span class="material-symbols-outlined" style="font-size: 36px;" onclick="toggleMenu()">
+            menu
+            </span>
+        <nav class="navegation" id="mymenu">
             <h1 class="home">Sentchu swap</h1>
             <ul>
-                <li><a href="#">Serviços</a></li>
+                <li><a href="#service">Serviços</a></li>
                 <li><a href="#conversor">Taxas</a></li>
                 <li><a href="#">Contactos</a></li>
                 <li><a id="cor" class="botao" href="#">Comprar</a></li>
                 <li><a class="botao" href="#">Vender</a></li>
+                <li><a href="#" id="close" onclick="closeMenu()">&times;</a></li>
+
             </ul>
         </nav>
     </header>
@@ -23,10 +30,10 @@
     <section id="titulo">
         <h1>Venda ou compre dinheiro sem complicações</h1>
         <p>Transações rápidas e seguras</p>
-        <a class="botao" href="#conversor">Ver taxas de câmbio</a>
+        <a href="#conversor">Ver taxas de câmbio</a>
     </section>
 
-    <section class="servicos">
+    <section class="servicos" id="service">
         <article class="servico">
             <h2>Serviços</h2>
         </article>
@@ -78,10 +85,11 @@
             </article>
 
             <article id="converteu">
+                <hr>
                 <h4>Conversor</h4>
                 <form action="#" method="post">
                     <div class="converte">
-                        <input type="number" min="0" placeholder="Select the value">
+                        <input type="number" min="0" step="0.01" placeholder="Insira um valor ex 55,7" required>
                     </div>
                     <div class="converte" id="coin-name">
                         <select name="coins" id="coin-name">
@@ -117,5 +125,7 @@
             <p>&copy; 2024 Sentchu Swap Todos os direitos reservados.</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
